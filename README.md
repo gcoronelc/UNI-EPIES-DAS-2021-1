@@ -1,4 +1,4 @@
-![UNI-EPIES DAS 2021-1](https://raw.githubusercontent.com/gcoronelc/UNI-EPIES-DAS-2021-1/main/IMG/CURSO.JPG)
+![UNI-EPIES DAS 2021-1](https://raw.githubusercontent.com/gcoronelc/UNI-EPIES-DAS-2021-1/main/img/CURSO.JPG)
 
 
 # UNI-EPIES ADS
