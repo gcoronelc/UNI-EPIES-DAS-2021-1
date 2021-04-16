@@ -8,8 +8,8 @@
 - Horario 2: VIE de 3 a 6 pm (Teoria)
 - Inicio: 15.ABRIL.2021
 - Aula virtual: https://www.virtualfieecs.pe/
-- Delegado: 
-- Subdelegado: 
+- Delegado: ENZO CARBAJAL
+- Subdelegado: KIARA FRANCISCO Y ALDO CONDOR MEDINA
 
 
 # DOCENTE

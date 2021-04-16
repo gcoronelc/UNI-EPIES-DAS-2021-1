@@ -1,0 +1,27 @@
+SQL SERVER
+--------------------------
+- LENGUAJE SQL 
+- PROGRAMACIÓN
+- GESTION DE TRANSACCIONES
+
+
+JAVA
+--------------------------
+- JAVA JDBC
+- JAVA WEB
+
+
+DESARROLLO WEB
+--------------------------
+- HTML
+- JAVASCRIPT
+- JQUERY
+- CSS
+- BOOTSTRAP 4
+
+
+ANALISIS DESCRIPTIVO
+---------------------------
+- POWER BI
+
+
