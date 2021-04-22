@@ -9,7 +9,7 @@
 - Inicio: 15.ABRIL.2021
 - Aula virtual: https://www.virtualfieecs.pe/
 - Delegado: ENZO CARBAJAL
-- Subdelegado: KIARA FRANCISCO Y ALDO CONDOR MEDINA
+- Subdelegado: KIARA FRANCISCO Y KEVIN PAUCAR
 
 
 # DOCENTE
