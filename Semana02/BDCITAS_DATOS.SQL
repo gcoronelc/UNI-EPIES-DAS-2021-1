@@ -27,6 +27,7 @@ GO
 
 -- =============================================
 -- Tabla: ESPECIALIDAD
+-- minimo: 15
 -- =============================================
 
 select * from especialidad;
@@ -44,6 +45,8 @@ GO
 
 -- =============================================
 -- Tabla: PACIENTE
+-- Nueva columna: DISTRITO
+-- Minimo: 1000 Filas
 -- =============================================
 
 select * from paciente;
