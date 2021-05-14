@@ -1,0 +1,18 @@
+- Promedio final automático
+- Gestión de Matricula
+- Promedio de notas por periodo
+
+-------------------------------------------------------
+Gestión Académica de la FIEECS
+-------------------------------------------------------
+- Planes de estudio (Malla curricular)
+- Estudiantes estan amarrados a una malla
+- Plana docente
+- Planificación de periodo
+- Matricula
+- Asistencia
+- Registro de notas
+- Reclamos
+- Reportes
+- Mentoria
+- 
