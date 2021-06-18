@@ -1,0 +1,40 @@
+
+CREATE TABLE CONTADOR
+( 
+	IDCONTADOR           integer  NOT NULL ,
+	TABLA                varchar(100)  NOT NULL ,
+	ULTIMO               integer  NOT NULL ,
+	CONSTRAINT XPKCONTADOR PRIMARY KEY (IDCONTADOR ASC)
+)
+go
+
+
+
+CREATE TABLE DISTRITO
+( 
+	IDDISTRITO           integer  NOT NULL ,
+	NOMBRE               varchar(100)  NOT NULL ,
+	CONSTRAINT XPKDISTRITO PRIMARY KEY (IDDISTRITO ASC)
+)
+go
+
+
+
+CREATE TABLE CLIENTE
+( 
+	IDCLIENTE            integer  NOT NULL ,
+	NOMBRE               varchar(100)  NOT NULL ,
+	APELLIDO             varchar(100)  NOT NULL ,
+	DNI                  varchar(20)  NOT NULL ,
+	IDDISTRITO           integer  NOT NULL ,
+	DIRECCION            varchar(150)  NOT NULL ,
+	TELEFONO             varchar(20)  NOT NULL ,
+	CORREO               varchar(100)  NOT NULL ,
+	CONSTRAINT XPKCLIENTE PRIMARY KEY (IDCLIENTE ASC),
+	CONSTRAINT FK_CLIENTE_DISTRITO FOREIGN KEY (IDDISTRITO) REFERENCES DISTRITO(IDDISTRITO)
+		ON DELETE NO ACTION
+		ON UPDATE NO ACTION
+)
+go
+
+

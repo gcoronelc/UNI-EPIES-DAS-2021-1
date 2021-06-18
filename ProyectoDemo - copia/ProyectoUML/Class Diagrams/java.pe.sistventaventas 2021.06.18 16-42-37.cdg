@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="java.pe.sistventaventas">
+  <ClassDiagramComponents>
+    <Class name="Algo" package="pe.sistventaventas" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="LogonController" package="pe.sistventaventas.controller" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="service" returnType="void" visibility="protected">
+          <Argument type="HttpServletRequest" name="request"/>
+          <Argument type="HttpServletResponse" name="response"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AccesoDB" package="pe.sistventaventas.db" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getConnection" returnType="Connection" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="ClienteDto" package="pe.sistventaventas.dto" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="idcliente" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="dni" type="String" visibility="private"/>
+        <Field name="iddistrito" type="String" visibility="private"/>
+        <Field name="direccion" type="String" visibility="private"/>
+        <Field name="telefono" type="String" visibility="private"/>
+        <Field name="correo" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIdcliente" returnType="int" visibility="public"/>
+        <Method name="setIdcliente" returnType="void" visibility="public">
+          <Argument type="int" name="idcliente"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getDni" returnType="String" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="String" name="dni"/>
+        </Method>
+        <Method name="getIddistrito" returnType="String" visibility="public"/>
+        <Method name="setIddistrito" returnType="void" visibility="public">
+          <Argument type="String" name="iddistrito"/>
+        </Method>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="getCorreo" returnType="String" visibility="public"/>
+        <Method name="setCorreo" returnType="void" visibility="public">
+          <Argument type="String" name="correo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioDto" package="pe.sistventaventas.dto" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="idempleado" type="int" visibility="private"/>
+        <Field name="usuario" type="String" visibility="private"/>
+        <Field name="clave" type="String" visibility="private"/>
+        <Field name="idrol" type="int" visibility="private"/>
+        <Field name="rol" type="String" visibility="private"/>
+        <Field name="activo" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIdempleado" returnType="int" visibility="public"/>
+        <Method name="setIdempleado" returnType="void" visibility="public">
+          <Argument type="int" name="idempleado"/>
+        </Method>
+        <Method name="getUsuario" returnType="String" visibility="public"/>
+        <Method name="setUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="usuario"/>
+        </Method>
+        <Method name="getClave" returnType="String" visibility="public"/>
+        <Method name="setClave" returnType="void" visibility="public">
+          <Argument type="String" name="clave"/>
+        </Method>
+        <Method name="getIdrol" returnType="int" visibility="public"/>
+        <Method name="setIdrol" returnType="void" visibility="public">
+          <Argument type="int" name="idrol"/>
+        </Method>
+        <Method name="getRol" returnType="String" visibility="public"/>
+        <Method name="setRol" returnType="void" visibility="public">
+          <Argument type="String" name="rol"/>
+        </Method>
+        <Method name="getActivo" returnType="int" visibility="public"/>
+        <Method name="setActivo" returnType="void" visibility="public">
+          <Argument type="int" name="activo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Prueba01" package="pe.sistventaventas.prueba" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Prueba02" package="pe.sistventaventas.prueba" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AbstractService" package="pe.sistventaventas.service" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="code" type="int" visibility="private"/>
+        <Field name="message" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCode" returnType="int" visibility="public"/>
+        <Method name="setCode" returnType="void" visibility="public">
+          <Argument type="int" name="code"/>
+        </Method>
+        <Method name="getMessage" returnType="String" visibility="public"/>
+        <Method name="setMessage" returnType="void" visibility="public">
+          <Argument type="String" name="message"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteService" package="pe.sistventaventas.service" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="leerTodos" returnType="List&lt;ClienteDto&gt;" visibility="public"/>
+        <Method name="leerTodos" returnType="List&lt;ClienteDto&gt;" visibility="public">
+          <Argument type="ClienteDto" name="bean"/>
+        </Method>
+        <Method name="leerPorId" returnType="List&lt;ClienteDto&gt;" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="grabar" returnType="int" visibility="public">
+          <Argument type="ClienteDto" name="bean"/>
+        </Method>
+        <Method name="actualizar" returnType="int" visibility="public">
+          <Argument type="ClienteDto" name="bean"/>
+        </Method>
+        <Method name="eliminar" returnType="int" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="ICrud" package="pe.sistventaventas.service" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Methods>
+        <Method name="leerTodos" returnType="List&lt;T&gt;" visibility="package"/>
+        <Method name="leerTodos" returnType="List&lt;T&gt;" visibility="package">
+          <Argument type="T" name="bean"/>
+        </Method>
+        <Method name="leerPorId" returnType="List&lt;T&gt;" visibility="package">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="grabar" returnType="int" visibility="package">
+          <Argument type="T" name="bean"/>
+        </Method>
+        <Method name="actualizar" returnType="int" visibility="package">
+          <Argument type="T" name="bean"/>
+        </Method>
+        <Method name="eliminar" returnType="int" visibility="package">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="LogonService" package="pe.sistventaventas.service" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="validar" returnType="UsuarioDto" visibility="public">
+          <Argument type="String" name="usuario"/>
+          <Argument type="String" name="clave"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="pe.sistventaventas.service.LogonService" target="pe.sistventaventas.service.AbstractService"/>
+    <UseRelation source="pe.sistventaventas.service.ClienteService" target="pe.sistventaventas.dto.ClienteDto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="pe.sistventaventas.service.LogonService" target="pe.sistventaventas.dto.UsuarioDto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="pe.sistventaventas.service.ClienteService" target="pe.sistventaventas.service.AbstractService"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pe.sistventaventas.service.ClienteService" target="pe.sistventaventas.service.ICrud"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
