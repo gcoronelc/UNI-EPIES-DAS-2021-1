@@ -9,11 +9,11 @@ package pe.sistventaventas.dto;
  */
 public class ClienteDto {
 
-	private int idcliente;
+	private Integer idcliente;
 	private String nombre;
 	private String apellido;
 	private String dni;
-	private int iddistrito;
+	private Integer iddistrito;
 	private String direccion;
 	private String telefono;
 	private String correo;
@@ -21,11 +21,11 @@ public class ClienteDto {
 	public ClienteDto() {
 	}
 
-	public int getIdcliente() {
+	public Integer getIdcliente() {
 		return idcliente;
 	}
 
-	public void setIdcliente(int idcliente) {
+	public void setIdcliente(Integer idcliente) {
 		this.idcliente = idcliente;
 	}
 
@@ -53,11 +53,11 @@ public class ClienteDto {
 		this.dni = dni;
 	}
 
-	public int getIddistrito() {
+	public Integer getIddistrito() {
 		return iddistrito;
 	}
 
-	public void setIddistrito(int iddistrito) {
+	public void setIddistrito(Integer iddistrito) {
 		this.iddistrito = iddistrito;
 	}
 
@@ -84,5 +84,6 @@ public class ClienteDto {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
+
 
 }

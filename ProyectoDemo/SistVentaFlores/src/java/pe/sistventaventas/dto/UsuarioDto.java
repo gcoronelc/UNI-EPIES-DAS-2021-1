@@ -9,21 +9,21 @@ package pe.sistventaventas.dto;
  */
 public class UsuarioDto {
 
-	private int idempleado;
+	private Integer idempleado;
 	private String usuario;
 	private String clave;
-	private int idrol;
+	private Integer idrol;
 	private String rol; 
 	private int activo;
 
 	public UsuarioDto() {
 	}
 
-	public int getIdempleado() {
+	public Integer getIdempleado() {
 		return idempleado;
 	}
 
-	public void setIdempleado(int idempleado) {
+	public void setIdempleado(Integer idempleado) {
 		this.idempleado = idempleado;
 	}
 
@@ -43,11 +43,11 @@ public class UsuarioDto {
 		this.clave = clave;
 	}
 
-	public int getIdrol() {
+	public Integer getIdrol() {
 		return idrol;
 	}
 
-	public void setIdrol(int idrol) {
+	public void setIdrol(Integer idrol) {
 		this.idrol = idrol;
 	}
 
@@ -67,6 +67,7 @@ public class UsuarioDto {
 		this.activo = activo;
 	}
 
+	
 	
 
 }
