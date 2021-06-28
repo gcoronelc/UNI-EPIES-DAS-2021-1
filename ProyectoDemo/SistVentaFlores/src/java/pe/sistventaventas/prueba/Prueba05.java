@@ -16,8 +16,8 @@ public class Prueba05 {
 	public static void main(String[] args) {
 		// Datos
 		ClienteDto criterio = new ClienteDto();
-		criterio.setIdcliente(3);
-		criterio.setNombre("MA");
+		criterio.setIdcliente(null);
+		criterio.setNombre("");
 		//criterio.setApellido("OLI");
 		try {
 			

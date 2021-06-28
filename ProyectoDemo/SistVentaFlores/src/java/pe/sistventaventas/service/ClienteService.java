@@ -221,6 +221,7 @@ public class ClienteService extends AbstractService implements ICrud<ClienteDto>
 			// Finalizar proceso
 			bean.setIdcliente(codigo);
 			cn.commit(); // Confirma la transacción
+			this.setMessage("Proceso ok. Código de nuevo cliente es " + codigo + ".");
 		} catch (SQLException e) {
 			this.setCode(-1);
 			this.setMessage(e.getMessage());
