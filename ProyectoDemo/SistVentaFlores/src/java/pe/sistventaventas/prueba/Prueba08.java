@@ -1,6 +1,5 @@
 package pe.sistventaventas.prueba;
 
-import pe.sistventaventas.dto.ClienteDto;
 import pe.sistventaventas.service.ClienteService;
 
 /**
