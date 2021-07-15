@@ -1,3 +1,5 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!-- El menú del sistema -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container">
@@ -11,6 +13,21 @@
 				<li class="nav-item active">
 					<a class="nav-link" href="main.jsp">Home</a>
 				</li>
+				
+				<!-- Procesos -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Procesos
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="ProcVentaPage">Venta</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+				
+				<!-- Mantenimiento de maestros -->
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Maestros
@@ -23,7 +40,7 @@
 					</div>
 				</li>
 
-
+				<!--
 				<li class="nav-item">
 					<a class="nav-link" href="#">Link</a>
 				</li>
@@ -31,6 +48,18 @@
 				<li class="nav-item">
 					<a class="nav-link disabled" href="#">Disabled</a>
 				</li>
+				-->
+				
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						${sessionScope.usuario.usuario}
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Cerrar sesión</a>
+					</div>
+				</li>
+				
+				
 			</ul>
 		</div>
 	</div>

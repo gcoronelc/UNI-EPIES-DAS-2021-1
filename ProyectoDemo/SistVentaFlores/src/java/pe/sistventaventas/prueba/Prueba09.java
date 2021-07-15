@@ -24,9 +24,9 @@ public class Prueba09 {
 		ventaDto.setRepartoDistrito(5);
 		ventaDto.setRepartoDireccion("En mi casa de Comas.");
 		ventaDto.setCostoEnvio(50.0);
-		ventaDto.setBaseImponible(500.0);
-		ventaDto.setImpuesto(100.0);
-		ventaDto.setTotal(600.0);
+		ventaDto.setBaseImponible(520.0);
+		ventaDto.setImpuesto(130.0);
+		ventaDto.setTotal(650.0);
 		List<DetalleVentaDto> items = new ArrayList<>();
 		items.add(new DetalleVentaDto(0, 2, "aaaaa", 3, 100, 300));
 		items.add(new DetalleVentaDto(0, 3, "aaaaa", 2, 150, 300));		
