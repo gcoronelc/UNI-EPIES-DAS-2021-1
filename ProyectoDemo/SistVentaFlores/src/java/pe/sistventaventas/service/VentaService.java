@@ -4,9 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import pe.sistventaventas.db.AccesoDB;
 import pe.sistventaventas.dto.DetalleVentaDto;
+import pe.sistventaventas.dto.ProductoDto;
 import pe.sistventaventas.dto.VentaDto;
 
 /**
@@ -106,4 +108,10 @@ public class VentaService extends AbstractService {
 		return idventa;
 	}
 
+	
+	public List<ProductoDto> traerProductos(int categoria, String nombre){
+		List<ProductoDto> lista =  new ArrayList<>();
+		
+		return lista;
+	}
 }

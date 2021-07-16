@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import pe.sistventaventas.db.AccesoDB;
-import pe.sistventaventas.dto.ClienteDto;
 import pe.sistventaventas.dto.ComboDto;
 
 /**
@@ -17,17 +16,33 @@ import pe.sistventaventas.dto.ComboDto;
  * @youtube www.youtube.com/DesarrollaSoftware
  * @facebook www.facebook.com/groups/desarrollasoftware/
  */
-public class ComboService extends AbstractService{
+public class ComboService extends AbstractService {
 
 	public List<ComboDto> distritos() {
 		String query;
-		query = "select iddistrito codigo, nombre from distrito";
+		query = "select iddistrito codigo, nombre from distrito order by 2";
 		return leerCombo(query);
 	}
 
 	public List<ComboDto> categorias() {
 		String sql;
-		sql = "select idcategoria codigo, descripcion nombre from distrito";
+		sql = "select idcategoria codigo, nombre from CATEGORIA order by 2";
+		return leerCombo(sql);
+	}
+
+	public List<ComboDto> clientes() {
+		String sql;
+		sql = "select idcliente codigo, upper(concat(apellido, ', ', nombre)) nombre "
+				  + "from dbo.cliente";
+		return leerCombo(sql);
+	}
+
+	// La idea es usar parametros en el SQL.
+	public List<ComboDto> repartidores(int distrito) {
+		String sql;
+		sql = "select IDREPARTIDOR codigo, nombre "
+				  + "from dbo.REPARTIDOR "
+				  + "where IDDISTRITO = " + distrito;
 		return leerCombo(sql);
 	}
 

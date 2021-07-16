@@ -18,7 +18,8 @@ public class UtilController {
 	public static void cargarCombos(HttpServletRequest request){
 		ComboService service = new ComboService();
 		request.setAttribute("comboDistritos", service.distritos());
-		//request.setAttribute("comboCategorias", service.categorias());
+		request.setAttribute("comboCategorias", service.categorias());
+		request.setAttribute("comboClientes", service.clientes());
 	}
 
 }

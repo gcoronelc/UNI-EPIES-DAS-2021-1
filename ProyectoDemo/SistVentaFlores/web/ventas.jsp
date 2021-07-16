@@ -4,6 +4,7 @@
     Author     : Gustavo Coronel
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -34,8 +35,9 @@
 							<select class="form-control form-control-sm"
 									  id="idcliente" name="idcliente">
 								<option value="0">Seleccionar</option>
-								<option value="1">Cliente 1</option>
-								<option value="2">Cliente 2</option>
+								<c:forEach items="${comboClientes}" var="r">
+									<option value="${r.codigo}">${r.nombre}</option>
+								</c:forEach>
 							</select>
 						</div>
 					</div>
@@ -46,8 +48,9 @@
 							<select class="form-control form-control-sm"
 									  id="repartoDistrito" name="repartoDistrito">
 								<option value="0">Seleccionar</option>
-								<option value="1">Los Olivos</option>
-								<option value="2">Comas</option>
+								<c:forEach items="${comboDistritos}" var="r">
+									<option value="${r.codigo}">${r.nombre}</option>
+								</c:forEach>
 							</select>
 						</div>
 					</div>	
@@ -66,8 +69,6 @@
 							<select class="form-control form-control-sm"
 									  id="idrepartidor" name="idrepartidor">
 								<option value="0">Seleccionar</option>
-								<option value="1">Repartidor 1</option>
-								<option value="2">Repartidor 2</option>
 							</select>
 						</div>
 					</div>		
@@ -137,16 +138,6 @@
 							</tr>
 						</thead>
 						<tbody id="tablaDetalle">
-							<tr>
-								<td>1</td>
-								<td>1003 - Ramo Primavera</td>
-								<td>230.00</td>
-								<td>2</td>
-								<td>460.00</td>
-								<td>
-									<a href="#">Eliminar</a>
-								</td>
-							</tr>
 						</tbody>
 					</table>
 
@@ -176,8 +167,9 @@
 
 								<select class="form-control form-control-sm col-md-5"
 										  id="categoria" name="categoria">
-									<option th:each="categoria:${categorias}"
-											  th:value="${categoria.id}" th:text="${categoria.nombre}" />
+									<c:forEach items="${comboCategorias}" var="r">
+										<option value="${r.codigo}">${r.nombre}</option>
+									</c:forEach>
 								</select>
 								<div class="col-md-5">
 									<input type="text" name="nombre"
@@ -215,5 +207,6 @@
 		</div>
 
 		<jsp:include page="util/pie.jsp" />
+		<script src="paginasjs/ventas.js"></script>
 	</body>
 </html>
