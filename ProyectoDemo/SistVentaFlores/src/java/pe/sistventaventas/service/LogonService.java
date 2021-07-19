@@ -36,7 +36,7 @@ public class LogonService extends AbstractService {
 			pstm.setString(1, usuario);
 			pstm.setString(2, clave);
 			rs = pstm.executeQuery();
-			if(!rs.next()){
+			if (!rs.next()) {
 				rs.close();
 				pstm.close();
 				throw new SQLException("Datos incorrectos.");

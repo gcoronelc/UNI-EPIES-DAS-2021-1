@@ -1,5 +1,7 @@
 package pe.sistventaventas.dto;
 
+import java.io.Serializable;
+
 /**
  * @author Eric Gustavo Coronel Castillo
  * @blog www.desarrollasoftware.com
@@ -7,7 +9,9 @@ package pe.sistventaventas.dto;
  * @youtube www.youtube.com/DesarrollaSoftware
  * @facebook www.facebook.com/groups/desarrollasoftware/
  */
-public class ComboDto {
+public class ComboDto implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 
 	private int codigo;
 	private String nombre;

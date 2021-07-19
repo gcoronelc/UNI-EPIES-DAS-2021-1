@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import pe.sistventaventas.db.AccesoDB;
+import pe.sistventaventas.dto.ClienteDto;
 import pe.sistventaventas.dto.DetalleVentaDto;
 import pe.sistventaventas.dto.ProductoDto;
 import pe.sistventaventas.dto.VentaDto;
@@ -24,6 +25,7 @@ public class VentaService extends AbstractService {
 		int idventa = 0;
 		String query = "";
 		PreparedStatement pstm = null;
+		PreparedStatement pstmActStock = null;
 		ResultSet rs = null;
 		Connection cn = null;
 		int filas = 0;
@@ -68,11 +70,18 @@ public class VentaService extends AbstractService {
 			pstm.setDouble(10, ventaDto.getTotal());
 			pstm.executeUpdate();
 			pstm.close();
+			// Preparar objeto actualizar stock
+			pstmActStock = cn.prepareStatement("update producto set stock = stock - ? where idproducto = ? ");
 			// Grabar items
 			query = "INSERT INTO DETALLEVENTA(IDVENTA,IDPRODUCTO,CANTIDAD,"
 					  + "PRECIO,SUBTOTAL) VALUES(?,?,?,?,?)";
 			pstm = cn.prepareStatement(query);
-			for(DetalleVentaDto item: items){
+			for (DetalleVentaDto item : items) {
+				// Actualiza stock
+				pstmActStock.setInt(1, item.getCantidad());
+				pstmActStock.setInt(2, item.getIdproducto());
+				pstmActStock.executeUpdate();
+				// Registra detalle
 				pstm.setInt(1, idventa);
 				pstm.setInt(2, item.getIdproducto());
 				pstm.setInt(3, item.getCantidad());
@@ -81,6 +90,7 @@ public class VentaService extends AbstractService {
 				pstm.executeUpdate();
 			}
 			pstm.close();
+			pstmActStock.close();
 			// Finalizar proceso
 			ventaDto.setIdventa(idventa);
 			cn.commit(); // Confirma la transacción
@@ -108,10 +118,51 @@ public class VentaService extends AbstractService {
 		return idventa;
 	}
 
-	
-	public List<ProductoDto> traerProductos(int categoria, String nombre){
-		List<ProductoDto> lista =  new ArrayList<>();
-		
+	public List<ProductoDto> traerProductos(int categoria, String nombre) {
+		// Variables
+		List<ProductoDto> lista = new ArrayList<>();
+		ProductoDto dto = null;
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		Connection cn = null;
+		// Uniformizando datos
+		nombre = (nombre == null) ? "%" : "%" + nombre.trim() + "%";
+		// Query
+		String query = "select idproducto, nombre, preventa, stock "
+				  + "from PRODUCTO "
+				  + "where IDCATEGORIA = ? and NOMBRE LIKE ? ";
+		// Proceso
+		this.setCode(1);
+		this.setMessage("Proceso ok!!!");
+		try {
+			cn = AccesoDB.getConnection();
+			pstm = cn.prepareStatement(query);
+			pstm.setInt(1, categoria);
+			pstm.setString(2, nombre);
+			rs = pstm.executeQuery();
+			while (rs.next()) {
+				dto = new ProductoDto();
+				dto.setIdproducto(rs.getInt("idproducto"));
+				dto.setNombre(rs.getString("nombre"));
+				dto.setPreventa(rs.getDouble("preventa"));
+				dto.setStock(rs.getInt("stock"));
+				lista.add(dto);
+			} 
+			rs.close();
+			pstm.close();
+		} catch (SQLException e) {
+			this.setCode(-1);
+			this.setMessage(e.getMessage());
+		} catch (Exception e) {
+			e.printStackTrace();
+			this.setCode(-1);
+			this.setMessage("Error en el proceso, intenteo de nuevo.");
+		} finally {
+			try {
+				cn.close();
+			} catch (Exception e) {
+			}
+		}
 		return lista;
 	}
 }

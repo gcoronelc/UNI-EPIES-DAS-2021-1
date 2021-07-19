@@ -27,89 +27,94 @@
 													 value="Registrar venta" id="btnGrabarVenta">
 				</div>
 
-				<div class="card-body">
+				<form id="formVenta">
+				
+					<div class="card-body">
 
-					<div class="form-group row">
-						<label class="col-md-2" for="idcliente">Cliente:</label>
-						<div class="col-md-10">
-							<select class="form-control form-control-sm"
-									  id="idcliente" name="idcliente">
-								<option value="0">Seleccionar</option>
-								<c:forEach items="${comboClientes}" var="r">
-									<option value="${r.codigo}">${r.nombre}</option>
-								</c:forEach>
-							</select>
+						<div class="form-group row">
+							<label class="col-md-2" for="idcliente">Cliente:</label>
+							<div class="col-md-10">
+								<select class="form-control form-control-sm"
+										  id="idcliente" name="idcliente">
+									<option value="0">Seleccionar</option>
+									<c:forEach items="${comboClientes}" var="r">
+										<option value="${r.codigo}">${r.nombre}</option>
+									</c:forEach>
+								</select>
+							</div>
 						</div>
+
+						<div class="form-group row">
+							<label class="col-md-2" for="repartoDistrito">Distrito envío:</label>
+							<div class="col-md-10">
+								<select class="form-control form-control-sm"
+										  id="repartoDistrito" name="repartoDistrito">
+									<option value="0">Seleccionar</option>
+									<c:forEach items="${comboDistritos}" var="r">
+										<option value="${r.codigo}">${r.nombre}</option>
+									</c:forEach>
+								</select>
+							</div>
+						</div>	
+
+						<div class="form-group row">
+							<label class="col-md-2" for="repartoDireccion">Dirección:</label>
+							<div class="col-md-10">
+								<input type="text" name="repartoDireccion" id="repartoDireccion"
+										 class="form-control form-control-sm" placeholder="Dirección de envío." />
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label class="col-md-2" for="idrepartidor">Repartidor:</label>
+							<div class="col-md-10">
+								<select class="form-control form-control-sm"
+										  id="idrepartidor" name="idrepartidor">
+									<option value="0">Seleccionar</option>
+								</select>
+							</div>
+						</div>		
+
+						<div class="form-group row">
+							<label class="col-md-2" for="costoEnvio">Costo de envío:</label>
+							<div class="col-md-10">
+								<input value="50.00" type="text" name="costoEnvio" id="costoEnvio"
+										 class="form-control form-control-sm"
+										 readonly="readonly" />
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label class="col-md-2" for="baseImponible">Base imponible:</label>
+							<div class="col-md-10">
+								<input value="0.00" type="text" name="baseImponible" id="baseImponible"
+										 class="form-control form-control-sm"
+										 readonly="readonly" />
+							</div>
+						</div>					
+
+						<div class="form-group row">
+							<label class="col-md-2" for="impuesto">Impuesto:</label>
+							<div class="col-md-10">
+								<input value="0.00" type="text" name="impuesto" id="impuesto"
+										 class="form-control form-control-sm"
+										 readonly="readonly" />
+							</div>
+						</div>					
+
+						<div class="form-group row">
+							<label class="col-md-2" for="total">Total:</label>
+							<div class="col-md-10">
+								<input value="0.00" type="text" name="total" id="total"
+										 class="form-control form-control-sm"
+										 readonly="readonly" />
+							</div>
+						</div>
+
 					</div>
 
-					<div class="form-group row">
-						<label class="col-md-2" for="repartoDistrito">Distrito envío:</label>
-						<div class="col-md-10">
-							<select class="form-control form-control-sm"
-									  id="repartoDistrito" name="repartoDistrito">
-								<option value="0">Seleccionar</option>
-								<c:forEach items="${comboDistritos}" var="r">
-									<option value="${r.codigo}">${r.nombre}</option>
-								</c:forEach>
-							</select>
-						</div>
-					</div>	
+				</form>
 
-					<div class="form-group row">
-						<label class="col-md-2" for="repartoDireccion">Dirección:</label>
-						<div class="col-md-10">
-							<input type="text" name="repartoDireccion" id="repartoDireccion"
-									 class="form-control form-control-sm" placeholder="Dirección de envío." />
-						</div>
-					</div>
-
-					<div class="form-group row">
-						<label class="col-md-2" for="idrepartidor">Repartidor:</label>
-						<div class="col-md-10">
-							<select class="form-control form-control-sm"
-									  id="idrepartidor" name="idrepartidor">
-								<option value="0">Seleccionar</option>
-							</select>
-						</div>
-					</div>		
-
-					<div class="form-group row">
-						<label class="col-md-2" for="costoEnvio">Costo de envío:</label>
-						<div class="col-md-10">
-							<input value="50.00" type="text" name="costoEnvio" id="costoEnvio"
-									 class="form-control form-control-sm"
-									 readonly="readonly" />
-						</div>
-					</div>
-
-					<div class="form-group row">
-						<label class="col-md-2" for="baseImponible">Base imponible:</label>
-						<div class="col-md-10">
-							<input value="0.00" type="text" name="baseImponible" id="baseImponible"
-									 class="form-control form-control-sm"
-									 readonly="readonly" />
-						</div>
-					</div>					
-
-					<div class="form-group row">
-						<label class="col-md-2" for="impuesto">Impuesto:</label>
-						<div class="col-md-10">
-							<input value="0.00" type="text" name="impuesto" id="impuesto"
-									 class="form-control form-control-sm"
-									 readonly="readonly" />
-						</div>
-					</div>					
-
-					<div class="form-group row">
-						<label class="col-md-2" for="total">Total:</label>
-						<div class="col-md-10">
-							<input value="0.00" type="text" name="total" id="total"
-									 class="form-control form-control-sm"
-									 readonly="readonly" />
-						</div>
-					</div>
-
-				</div>
 			</div>
 
 			<!-- Lista de Productos -->
@@ -163,7 +168,7 @@
 					</div>
 					<div class="modal-body">
 						<form id="formCriterio">
-							<div class="row d-flex justify-content-center align-items-center">
+							<div class="row d-flex justify-content-center align-items-center p-2">
 
 								<select class="form-control form-control-sm col-md-5"
 										  id="categoria" name="categoria">
@@ -183,7 +188,7 @@
 
 							</div>
 						</form>
-						<div class="row mt-2">
+						<div class="row p-2">
 							<table class="table">
 								<thead class="thead-light">
 									<tr>
@@ -191,7 +196,6 @@
 										<th scope="col">NOMBRE</th>
 										<th scope="col">PRECIO</th>
 										<th scope="col">STOCK</th>
-										<th scope="col">CANTIDAD</th>
 										<th scope="col">ACCION</th>
 									</tr>
 								</thead>

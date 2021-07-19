@@ -1,5 +1,7 @@
 package pe.sistventaventas.dto;
 
+import java.io.Serializable;
+
 /**
  * @author Eric Gustavo Coronel Castillo
  * @blog www.desarrollasoftware.com
@@ -7,8 +9,10 @@ package pe.sistventaventas.dto;
  * @youtube www.youtube.com/DesarrollaSoftware
  * @facebook www.facebook.com/groups/desarrollasoftware/
  */
-public class DetalleVentaDto {
+public class DetalleVentaDto implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	private int idventa;
 	private int idproducto;
 	private String nombre;
@@ -17,6 +21,15 @@ public class DetalleVentaDto {
 	private double subtotal;
 
 	public DetalleVentaDto() {
+	}
+	
+	public DetalleVentaDto(ProductoDto dto) {
+		this.idventa = 0;
+		this.idproducto = dto.getIdproducto();
+		this.nombre = dto.getNombre();
+		this.cantidad = 1;
+		this.precio = dto.getPreventa();
+		this.subtotal = dto.getPreventa();
 	}
 
 	public DetalleVentaDto(int idventa, int idproducto, String nombre, int cantidad, double precio, double subtotal) {
