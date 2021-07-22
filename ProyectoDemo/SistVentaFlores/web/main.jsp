@@ -1,11 +1,10 @@
-<%-- 
-    Document   : main
-    Created on : 07/05/2021, 04:24:14 PM
-    Author     : Gustavo Coronel
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<c:if test="${sessionScope.usuario == null}">
+	<c:redirect url="index.jsp" />
+</c:if>
+
 <!DOCTYPE html>
 <html>
 	<head>

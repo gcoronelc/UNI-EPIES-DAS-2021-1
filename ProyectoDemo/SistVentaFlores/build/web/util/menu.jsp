@@ -20,8 +20,8 @@
 						Procesos
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="ProcVentaPage">Venta</a>
-						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="ProcVentaPage">Registro Venta</a>
+						<a class="dropdown-item" href="#">Ingreso Mercaderia</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#">Something else here</a>
 					</div>
@@ -39,23 +39,28 @@
 						<a class="dropdown-item" href="#">Something else here</a>
 					</div>
 				</li>
-
-				<!--
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
+				
+				<!-- Mantenimiento de maestros -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Reportes
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Ventas por mes</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
 				</li>
 
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Disabled</a>
-				</li>
-				-->
+
 				
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						${sessionScope.usuario.usuario}
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Cerrar sesión</a>
+						<a class="dropdown-item" href="LogonControllerSalir">Cerrar sesión</a>
 					</div>
 				</li>
 				

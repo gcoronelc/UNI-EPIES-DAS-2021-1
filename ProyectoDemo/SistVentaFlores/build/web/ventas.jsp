@@ -4,9 +4,13 @@
     Author     : Gustavo Coronel
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<c:if test="${sessionScope.usuario == null}">
+	<c:redirect url="index.jsp" />
+</c:if>
+
 <!DOCTYPE html>
 <html>
 	<head>
