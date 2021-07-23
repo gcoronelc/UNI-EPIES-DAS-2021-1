@@ -8,7 +8,9 @@
             <file>file:/D:/GITHUB/UNI/UNI-EPIES-DAS-2021-1/ProyectoDemo/SistVentaFlores/web/util/cabecera.jsp</file>
             <file>file:/D:/GITHUB/UNI/UNI-EPIES-DAS-2021-1/ProyectoDemo/SistVentaFlores/src/java/pe/sistventaventas/controller/VentaController.java</file>
             <file>file:/D:/GITHUB/UNI/UNI-EPIES-DAS-2021-1/ProyectoDemo/SistVentaFlores/web/clientesForm.jsp</file>
+            <file>file:/D:/GITHUB/UNI/UNI-EPIES-DAS-2021-1/ProyectoDemo/SistVentaFlores/src/java/pe/sistventaventas/controller/ClienteController.java</file>
             <file>file:/D:/GITHUB/UNI/UNI-EPIES-DAS-2021-1/ProyectoDemo/SistVentaFlores/web/util/menu.jsp</file>
+            <file>file:/D:/GITHUB/UNI/UNI-EPIES-DAS-2021-1/ProyectoDemo/SistVentaFlores/src/java/pe/sistventaventas/db/AccesoDB.java</file>
             <file>file:/D:/GITHUB/UNI/UNI-EPIES-DAS-2021-1/ProyectoDemo/SistVentaFlores/web/clientes.jsp</file>
             <file>file:/D:/GITHUB/UNI/UNI-EPIES-DAS-2021-1/ProyectoDemo/SistVentaFlores/src/java/pe/sistventaventas/controller/LogonController.java</file>
         </group>
